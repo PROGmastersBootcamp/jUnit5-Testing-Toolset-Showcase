@@ -1,14 +1,12 @@
 package hu.progmasters.testing.demo_05_annotations;
 
-import hu.progmasters.testing.Demo;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @TestMethodOrder(MethodOrdererByMethodNameLength.class)
-public class DemoTestWithCustomOrder {
+public class TestAnnotations_03_DemoTestWithCustomOrder {
 
     @Test
     void shortName() {

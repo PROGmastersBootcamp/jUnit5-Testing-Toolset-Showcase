@@ -19,6 +19,7 @@ import static org.junit.jupiter.api.Assertions.*;
 // throws, notThrows,
 // timeout, timeoutPreemptively
 // assertAll
+// nestedAssertions
 @Execution(ExecutionMode.CONCURRENT)
 public class TestAssertions {
 

@@ -20,7 +20,7 @@ import org.junit.jupiter.api.parallel.ExecutionMode;
 // -Djunit.jupiter.execution.parallel.mode.default=same_thread
 // -Djunit.jupiter.execution.parallel.mode.classes.default=concurrent
 @Execution(ExecutionMode.CONCURRENT)
-public class DemoTestParallel {
+public class TestAnnotations_02_DemoTestParallel {
 
     @Test
     public void a() {

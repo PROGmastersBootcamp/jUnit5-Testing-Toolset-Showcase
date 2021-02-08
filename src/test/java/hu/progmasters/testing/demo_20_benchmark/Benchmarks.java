@@ -1,4 +1,4 @@
-package hu.progmasters.testing.demo_08_benchmark;
+package hu.progmasters.testing.demo_20_benchmark;
 
 import org.openjdk.jmh.annotations.*;
 
