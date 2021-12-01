@@ -27,6 +27,7 @@
             <version>5.7.0</version>
             <scope>test</scope>
         </dependency>
+
         <!-- The following annotation is needed for jUnit 4 compatibility -->
         <dependency>
             <groupId>org.junit.platform</groupId>
@@ -34,6 +35,7 @@
             <version>1.7.0</version>
             <scope>test</scope>
         </dependency>
+
         <!-- The following annotation is needed for parameterized testing -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -41,6 +43,7 @@
             <version>5.7.0</version>
             <scope>test</scope>
         </dependency>
+
         <!-- The next 2 annotation is necessary for benchmarking -->
         <dependency>
             <groupId>org.openjdk.jmh</groupId>
