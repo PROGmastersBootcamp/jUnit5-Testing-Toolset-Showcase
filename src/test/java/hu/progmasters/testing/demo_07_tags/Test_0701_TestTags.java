@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 //TODO Talk about:
 // - how to tag tests, and how to use this to your benefit
-public class TestTags {
+public class Test_0701_TestTags {
 
     @Nested
     @Tag("unit-test")

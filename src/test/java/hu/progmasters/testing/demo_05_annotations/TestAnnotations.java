@@ -1,9 +1,6 @@
 package hu.progmasters.testing.demo_05_annotations;
 
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.RepeatedTest;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.condition.EnabledOnJre;
 import org.junit.jupiter.api.condition.JRE;
 
@@ -25,12 +22,12 @@ import static org.junit.jupiter.api.Assertions.*;
 //@EnabledOnOs({OS.LINUX, OS.WINDOWS})
 //@DisabledOnOs(OS.OTHER)
 //@TestMethodOrder(OrderAnnotation.class)
-//@TestMethodOrder(MethodOrderer.Alphanumeric.class)
+//@TestMethodOrder(MethodOrderer.MethodName.class)
 //@TestMethodOrder(MethodOrderer.Random.class)
 public class TestAnnotations {
 
     @Test
-    @DisplayName("Some fancy, more descriptive name for out test method")
+    @DisplayName("Some fancy, more descriptive name for our test method")
     public void testMinNumberGivesCorrectAnswer() {
         Integer calculatedMinimumNumber = Math.min(1, 0);
         assertEquals(0, calculatedMinimumNumber);
@@ -46,10 +43,17 @@ public class TestAnnotations {
         assertArrayEquals(numbersA, numbersB, "message");
     }
 
-    @Test
     @RepeatedTest(value = 20,
-                  name = "Current iteration {currentRepetition} of {totalRepetitions}")
+            name = "Current iteration {currentRepetition} of {totalRepetitions}")
     public void testArrayEqualsWithSort() {
+        int randomNumber = new Random().nextInt(10);
+        assertTrue(randomNumber < 9);
+    }
+
+    @RepeatedTest(value = 20,
+            name = "Current iteration {currentRepetition} of {totalRepetitions}")
+    public void testArrayEqualsWithSort(RepetitionInfo repetitionInfo) {
+        System.out.println(repetitionInfo.getCurrentRepetition());
         int randomNumber = new Random().nextInt(10);
         assertTrue(randomNumber < 9);
     }

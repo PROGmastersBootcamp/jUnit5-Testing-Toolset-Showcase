@@ -15,7 +15,7 @@ import static org.junit.jupiter.api.Assumptions.assumeTrue;
 //TODO Talk about:
 // - new annotations
 // - the power and purpose of nesting classes
-public class TestNesting {
+public class Test_0601_TestNesting {
 
     private List<Integer> numbers;
 

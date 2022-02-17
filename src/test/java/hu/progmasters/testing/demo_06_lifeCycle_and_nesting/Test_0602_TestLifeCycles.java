@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 //TODO Talk about:
 // - new annotations
 // - use-cases of PER_CLASS lifecycle
-public class TestLifeCycles {
+public class Test_0602_TestLifeCycles {
 
     private int number = 0;
 

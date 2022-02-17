@@ -15,7 +15,7 @@ import org.junit.jupiter.api.parallel.ExecutionMode;
 // -Djunit.jupiter.execution.parallel.enabled=true
 // -Djunit.jupiter.execution.parallel.mode.default=concurrent
 // ****
-// Run test classes parallel:
+// Run test classes parallel: (one thread per class = class methods one after other)
 // -Djunit.jupiter.execution.parallel.enabled=true
 // -Djunit.jupiter.execution.parallel.mode.default=same_thread
 // -Djunit.jupiter.execution.parallel.mode.classes.default=concurrent

@@ -13,7 +13,6 @@
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -36,6 +35,7 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- Module - 08-->
         <!-- The following annotation is needed for parameterized testing -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -44,6 +44,15 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- Module - 10-->
+        <!-- The next annotation is for Hamcrest Matchers -->
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-all</artifactId>
+            <version>1.3</version>
+        </dependency>
+
+        <!-- Module - 20-->
         <!-- The next 2 annotation is necessary for benchmarking -->
         <dependency>
             <groupId>org.openjdk.jmh</groupId>
@@ -57,5 +66,70 @@
         </dependency>
     </dependencies>
 
-
+    <!--  Module-12 - Coverage -->
+    <!--  Some configuration needed  for test-coverage reports-->
+    <profiles>
+        <!--  We setup a custom profile so we can toggle report generating easily-->
+        <profile>
+            <id>test</id>
+            <properties>
+                <env>test</env>
+                <gebEnv>test</gebEnv>
+                <jacoco.skip>false</jacoco.skip>
+                <maven.test.skip>false</maven.test.skip>
+                <skip.unit.tests>false</skip.unit.tests>
+            </properties>
+        </profile>
+    </profiles>
+    <build>
+        <plugins>
+            <!--  We make test-coverage report creation a part of our build process -->
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.7</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>generate-code-coverage-report</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                    <!-- We can add a coverage minimum to fail our builds -->
+                    <execution>
+                        <id>check</id>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+                                <rule>
+                                    <element>CLASS</element>
+                                    <limits>
+                                        <limit>
+                                            <!-- The supported counter options are:
+                                                    LINE, BRANCH, INSTRUCTION, COMPLEXITY, METHOD, CLASS
+                                            -->
+                                            <counter>INSTRUCTION</counter>
+                                            <value>COVEREDRATIO</value>
+                                            <minimum>0.80</minimum>
+                                        </limit>
+                                    </limits>
+                                    <excludes>
+                                        <exclude>com.xyz.ClassToExclude</exclude>
+                                    </excludes>
+                                </rule>
+                            </rules>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>

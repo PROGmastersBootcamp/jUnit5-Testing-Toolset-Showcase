@@ -1,6 +1,7 @@
 package hu.progmasters.testing.demo_07_tags;
 
 import org.junit.platform.runner.JUnitPlatform;
+import org.junit.platform.suite.api.IncludeClassNamePatterns;
 import org.junit.platform.suite.api.SelectPackages;
 import org.junit.runner.RunWith;
 
@@ -10,7 +11,7 @@ import org.junit.runner.RunWith;
 //@IncludeTags("integration-test")
 //@IncludeTags("a")
 //@IncludeTags({"unit-test", "integration-test"})
-//@IncludeClassNamePatterns({"^.*Tags?$"})
+@IncludeClassNamePatterns({"^.*Tags?$"})
 /*
     The following annotation must be included to run such tests:
 
@@ -22,7 +23,6 @@ import org.junit.runner.RunWith;
         </dependency>
 
  */
-public interface TaggedTestSuites {
+public interface Test_0702_TaggedTestSuites {
 
 }
-

@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 //TODO Talk about:
 // - different ways to pass parameters to test classes
-public class TestWithParameters {
+public class Test_0801_TestWithParameters {
 
     private static Stream<Arguments> provideStringsForIsBlank() {
         return Stream.of(

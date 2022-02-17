@@ -2,19 +2,11 @@
 
 ## Why do we test?
 
-// TODO
-
 ## Why automatize, and how?
-
-// TODO
 
 ## Methodology
 
-// TODO
-
 ## JUnit 5
-
-// TODO
 
 # 01 - Basics
 
@@ -58,12 +50,6 @@ Közös feladatmegoldás
 
 ### @Test annotation
 
-### execution order
-
-### anatomy of a test method
-
-### naming conventions
-
 ## Hands-on
 
 Közös feladatmegoldás
@@ -78,7 +64,7 @@ Közös feladatmegoldás
 
 ### different assertion methods
 
-### assertEquals, True/False, ArrayEquals,
+### assertEquals, True/False, arrayEquals,
 
 ### throws, notThrows,
 
@@ -120,7 +106,7 @@ Közös feladatmegoldás
 
 ### to add descriptive display names
 
-### to order methods (and why its a bad practice)
+### to order methods (and why it's a bad practice)
 
 ### custom ordering method (DemoTestWithCustomOrder class)
 
@@ -200,16 +186,22 @@ argument matcher, argument captor, verify, dependency injection, stubbing
 
 # 20 - Benchmarking
 
-## Training
+# Néhány hasznos tip:
 
-//TODO Talk about:  
-// - different ways to pass parameters to test classes  
-// - purpose and power of this approach
+### Run tests before commit (Nem sikerült működésre bírni)
 
-## Hands-on
+- IntelliJ -> Settings -> Version Control -> Commit -> Run Tests before commit
 
-Közös feladatmegoldás
+### Auto-create tests
 
-## Exercise
+- IntelliJ --> classname -> Alt+Enter -> 'Create Test'
 
-Önálló feladatmegoldás  
+### Test-run history
+
+- Run window --> Test History ( stopwatch icon )
+
+### Test Data plugin
+
+- Install plugin
+- Alt + Insert -> Test Data
+- Extra: Custom Generator
