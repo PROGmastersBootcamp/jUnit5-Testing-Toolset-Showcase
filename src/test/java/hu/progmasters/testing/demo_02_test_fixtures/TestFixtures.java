@@ -23,6 +23,11 @@ class TestFixtures {
         System.out.println("--setup for test method...");
     }
 
+    @AfterEach
+    public void tearDown() {
+        System.out.println("--teardown after test method...");
+    }
+
     @Test
     public void testMinNumber() {
         System.out.println("---running test...");
@@ -35,11 +40,6 @@ class TestFixtures {
         System.out.println("---running test...");
         int calculatedMinimumNumber = Math.min(1, -10);
         Assertions.assertEquals(-10, calculatedMinimumNumber);
-    }
-
-    @AfterEach
-    public void tearDown() {
-        System.out.println("--teardown after test method...");
     }
 
 }

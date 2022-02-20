@@ -15,6 +15,7 @@ public class TempDirectory {
 
     @TempDir // Share a temporary directory between test methods.
     static Path sharedTempDir;
+
     @TempDir
     Path globalTempDir;
 

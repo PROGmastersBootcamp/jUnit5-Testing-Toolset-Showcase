@@ -1,6 +1,9 @@
 package hu.progmasters.testing.demo_05_annotations;
 
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.RepeatedTest;
+import org.junit.jupiter.api.RepetitionInfo;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.condition.EnabledOnJre;
 import org.junit.jupiter.api.condition.JRE;
 
@@ -34,7 +37,6 @@ public class TestAnnotations {
     }
 
     @Test
-    @Order(1)
     public void testArrayEquals() {
         int[] numbersA = new int[]{1, 2, 3};
         int[] numbersB = new int[]{3, 2, 1};

@@ -1,17 +1,16 @@
 package hu.progmasters.testing.demo_07_tags;
 
 import org.junit.platform.runner.JUnitPlatform;
-import org.junit.platform.suite.api.IncludeClassNamePatterns;
 import org.junit.platform.suite.api.SelectPackages;
 import org.junit.runner.RunWith;
 
 @RunWith(JUnitPlatform.class)
-@SelectPackages("hu.progmasters")
+@SelectPackages("hu.progmasters.testing")
 //@IncludeTags("unit-test")
 //@IncludeTags("integration-test")
 //@IncludeTags("a")
 //@IncludeTags({"unit-test", "integration-test"})
-@IncludeClassNamePatterns({"^.*Tags?$"})
+//@IncludeClassNamePatterns({"^.*Basics?$"})
 /*
     The following annotation must be included to run such tests:
 

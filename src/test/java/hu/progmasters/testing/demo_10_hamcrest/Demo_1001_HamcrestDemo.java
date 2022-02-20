@@ -14,7 +14,6 @@ import static org.hamcrest.Matchers.*;
 
 public class Demo_1001_HamcrestDemo {
 
-
     @Test
     public void test1() {
         Person personObject = new Person();
@@ -22,10 +21,9 @@ public class Demo_1001_HamcrestDemo {
         String textA = "textA";
         String textB = "textB";
         // Intro - writing fluent assertions
-        assertThat("The reason why the test failed", textA, is(equalTo("textA")));
-        assertThat("For example: textA shouldn't be equal to textB", textA, is(not(equalTo(textB))));
+        assertThat(textA, is(equalTo("textA")));
+        assertThat(textA, is(not(equalTo(textB))));
 
-        assertThat(textA, allOf(containsString("tex"), containsString("xtA")));
         assertThat(textA, allOf(containsString("tex"), containsString("xtA")));
 
         assertThat(textA, either(equalTo("textA")).or(equalTo("textB")));
@@ -40,14 +38,13 @@ public class Demo_1001_HamcrestDemo {
         assertThat(personObject, hasProperty("name", equalTo("Mr. Unit")));
         assertThat(personObject, samePropertyValuesAs(personObject));
 
-        assertThat(Arrays.asList("foo", "bar"), hasItem("bar"));
         assertThat("myValue", allOf(startsWith("my"), containsString("Val")));
 
         // Matching collections
         assertThat(new ArrayList<>(), empty());
+        assertThat(Arrays.asList("foo", "bar"), hasItem("bar"));
         assertThat(Arrays.asList(1, 2, 3, 4), hasSize(4));
         assertThat(Arrays.asList(1, 2, 3, 4), containsInAnyOrder(3, 4, 1, 2));
-        assertThat(Arrays.asList(1, 2, 3, 4), hasItem(1));
         assertThat(Arrays.asList(1, 2, 3, 4), not(hasItem(5)));
 
         Map<String, String> map = new HashMap<>();

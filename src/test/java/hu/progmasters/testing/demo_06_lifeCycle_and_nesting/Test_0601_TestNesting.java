@@ -27,6 +27,7 @@ public class Test_0601_TestNesting {
 
     @Test
     void checkListIsEmpty() {
+        System.out.println("checking empty list");
         assertTrue(numbers.isEmpty());
     }
 
@@ -42,13 +43,35 @@ public class Test_0601_TestNesting {
 
         @Test
         public void hasOneElement() {
+            System.out.println("nested class -> hasOneElement");
             assertEquals(1, numbers.size());
         }
 
         @Test
         public void valuesMatch() {
+            System.out.println("nested class -> valuesMatch");
             assumeTrue(!numbers.isEmpty());
             assertEquals(216, numbers.get(0));
+        }
+
+    }
+
+
+    @Nested
+    @DisplayName("with removing value ->")
+    public class RemoveItem {
+
+        @BeforeEach
+        void init() {
+            System.out.println("Adding a single item to list");
+            numbers.add(216);
+        }
+
+        @Test
+        public void valuesMatch() {
+            System.out.println("nested class -> removing value");
+            numbers.clear();
+            assumeTrue(numbers.isEmpty());
         }
 
     }

@@ -1,7 +1,6 @@
 package hu.progmasters.testing.demo_03_assertions;
 
 import hu.progmasters.testing.Demo;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.parallel.Execution;
 import org.junit.jupiter.api.parallel.ExecutionMode;
@@ -25,7 +24,6 @@ import static org.junit.jupiter.api.Assertions.*;
 public class TestAssertions {
 
     @Test
-    @Disabled
     public void testMinNumberGivesCorrectAnswer() {
         Integer calculatedMinimumNumber = Math.min(1, 0);
         assertEquals(0, calculatedMinimumNumber);
@@ -38,7 +36,6 @@ public class TestAssertions {
     }
 
     @Test
-    @Disabled
     public void testArrayEquals() {
         int[] numbersA = new int[]{1, 2, 3};
         int[] numbersB = new int[]{3, 2, 1};
@@ -78,7 +75,6 @@ public class TestAssertions {
     }
 
     @Test
-    @Disabled
     public void testTimeout_itTimeouts() {
         assertTimeout(Duration.ofSeconds(1), () -> {
             new Demo().methodThatTakesArgSecondsToRun(5);
@@ -86,7 +82,6 @@ public class TestAssertions {
     }
 
     @Test
-    @Disabled
     public void testTimeoutPreemptively_itTimeouts() {
         assertTimeoutPreemptively(Duration.ofSeconds(1), () -> {
             new Demo().methodThatTakesArgSecondsToRun(5);
@@ -94,7 +89,6 @@ public class TestAssertions {
     }
 
     @Test
-    @Disabled
     public void testNestedAssertions() {
         assertAll("nesting assertions",
                 () -> assertAll("testing min",

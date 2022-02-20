@@ -9,6 +9,7 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 //TODO Talk about:
+// - required dependency
 // - different ways to pass parameters to test classes
 public class Test_0801_TestWithParameters {
 
@@ -48,8 +49,8 @@ public class Test_0801_TestWithParameters {
         assertEquals(expected, input.isBlank());
     }
 
-    @ParameterizedTest
-//    @ParameterizedTest(name = "Currently tested role: {0}")
+    //    @ParameterizedTest
+    @ParameterizedTest(name = "Currently tested role: {0}")
     @EnumSource(value = Role.class)
     public void test(Role role) {
         System.out.println(role.name());
