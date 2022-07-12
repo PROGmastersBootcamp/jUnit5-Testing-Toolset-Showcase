@@ -8,6 +8,14 @@
 
 ## JUnit 5
 
+Let's take a look at what JUnit 5 offers:
+
+- running tests on the JVM
+- well-defined test-instance lifecycle (before/after a test)
+- built-in assertions to verify the outcome of your test
+- parameterized tests
+- extension model for implementing cross-cutting concerns for tests
+
 # 01 - Basics
 
 ## Training
@@ -183,6 +191,10 @@ argument matcher, argument captor, verify, dependency injection, stubbing
 # 12 - Test Coverage
 
 # 13 - Mutation testing
+
+# 14 - JSONAssert + JSONPath
+
+- TODO: Ezt valahová be lehetne rakni
 
 # 20 - Benchmarking
 
