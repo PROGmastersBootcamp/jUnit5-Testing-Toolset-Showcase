@@ -217,3 +217,8 @@ argument matcher, argument captor, verify, dependency injection, stubbing
 - Install plugin
 - Alt + Insert -> Test Data
 - Extra: Custom Generator
+
+TODO - Add:
+https://dzone.com/articles/exhaustive-junit5-testing-with-combinations-permut
+https://github.com/OpenHFT/Chronicle-Test-Framework
+http://www.agitar.com/solutions/products/software_agitation.html
